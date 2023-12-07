@@ -1,0 +1,28 @@
+## Pull Request Title:
+[Feature] Add fresco program for kitchen appliances
+
+## Pull Request Description:
+
+#### Overview:
+This pull request introduces the `fresco` program, which is a command-line tool for communication with a theoretical kitchen appliance MCU using a named pipe.
+
+#### Changes Made:
+- Added `main.c` file.
+- Added Fresco executable
+- Implemented support for handling little-endian encoded binary frames.
+- Added parsing logic for data points (dp) with various types.
+- Implemented basic error handling and data point ID bounds.
+
+#### Motivation:
+The goal is to create a tool capable of running as a Linux daemon, listening for messages from the MCU, and printing them in a pretty format. This will facilitate communication with kitchen appliances through a standardized protocol.
+
+#### Testing:
+- Manually tested the program with sample messages and verified correct parsing.
+
+#### Dependencies:
+- Uses standard C libraries.
+
+#### Additional Notes:
+- This is an initial implementation and may require additional features and error handling in the future.
+- The message handling which involves int16 is not working properly.
+
